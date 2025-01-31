@@ -1,7 +1,15 @@
+import { Card } from "./components/Card";
+
 function App() {
   return (
     <>
-      <h1>Greenbank</h1>
+      <div>
+        Greenbank
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <div>Footer</div>
     </>
   );
 }
