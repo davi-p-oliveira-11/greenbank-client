@@ -1,8 +1,11 @@
 import { Card } from "./components/Card";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <>
+      <Header />
       <div>
         Greenbank
         <Card
@@ -13,7 +16,7 @@ function App() {
         <Card id={2} paragraph="HTML" details="HTML para frontend" />
         <Card id={3} paragraph="SQL" details="SQL para banco de dados" />
       </div>
-      <div>Footer</div>
+      <Footer />
     </>
   );
 }
