@@ -1,23 +1,29 @@
-import { Card } from "./components/Card";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Layout } from "./components/Layout";
+import styled from "styled-components";
+import { Provider } from "@/components/ui/provider";
+
+const Box = styled.div`
+  background-color: orange;
+  border-radius: 25px;
+  padding-left: 15px;
+`;
 
 function App() {
   return (
-    <>
-      <Header />
-      <div>
-        Greenbank
-        <Card
-          id={1}
-          paragraph="Typescript"
-          details="TS para frontend e backend"
-        />
-        <Card id={2} paragraph="HTML" details="HTML para frontend" />
-        <Card id={3} paragraph="SQL" details="SQL para banco de dados" />
-      </div>
-      <Footer />
-    </>
+    <Provider>
+      <Layout>
+        <Box>
+          <h1>Faça o login</h1>
+        </Box>
+        <label htmlFor="emailInput">Email</label>
+        <input id="emailInput" type="email" />
+
+        <label htmlFor="passwordInput">Senha</label>
+        <input id="passwordInput" type="password" />
+
+        <button>Entrar</button>
+      </Layout>
+    </Provider>
   );
 }
 
